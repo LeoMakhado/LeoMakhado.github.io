@@ -1,12 +1,11 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
   --font-semi: 600;
   /*===== Colores =====*/
-  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
-  /* HSL color mode */
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
@@ -26,47 +25,6 @@
   --z-fixed: 100;
 }
 
-/* --- HORIZONTAL NAVIGATION STYLES (Desktop) --- */
-@media screen and (min-width: 768px) {
-    body {
-        overflow: hidden; /* Lock vertical scroll */
-    }
-
-    .l-main.horizontal-container {
-        display: flex;
-        flex-direction: row;
-        width: 500vw; /* 5 sections total */
-        height: 100vh;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        padding-top: calc(var(--header-height) + 1.5rem);
-        box-sizing: border-box;
-    }
-
-    .horizontal-section {
-        flex: 0 0 100vw;
-        width: 100vw;
-        height: calc(100vh - (var(--header-height) + 1.5rem));
-        scroll-snap-align: start;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        box-sizing: border-box;
-        overflow-y: auto;
-        padding-left: max(1rem, calc((100vw - 1024px) / 2));
-        padding-right: max(1rem, calc((100vw - 1024px) / 2));
-    }
-
-    .footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        z-index: 10;
-        padding: 1rem 0;
-    }
-}
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3.5rem;
@@ -90,6 +48,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
+  overflow-x: hidden;
 }
 
 h1, h2, p {
@@ -417,6 +376,7 @@ img {
     width: 200px;
   }
 }
+
 @media screen and (min-width: 576px) {
   .home {
     padding: 4rem 0 2rem;
@@ -458,10 +418,49 @@ img {
     justify-items: center;
   }
 }
+
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
+    overflow: hidden; /* Lock vertical scroll on desktop */
   }
+
+  /* --- HORIZONTAL NAVIGATION STYLES --- */
+  .horizontal-container {
+    display: flex;
+    flex-direction: row;
+    width: 500vw; /* 5 sections total */
+    height: 100vh;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-top: calc(var(--header-height) + 1.5rem);
+    box-sizing: border-box;
+  }
+
+  .horizontal-section {
+    flex: 0 0 100vw;
+    width: 100vw;
+    height: calc(100vh - (var(--header-height) + 1.5rem));
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding-left: max(1rem, calc((100vw - 1024px) / 2));
+    padding-right: max(1rem, calc((100vw - 1024px) / 2));
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem 0;
+  }
+
   .section {
     padding-top: 4rem;
     padding-bottom: 3rem;
@@ -514,6 +513,7 @@ img {
     column-gap: 2rem;
   }
 }
+
 @media screen and (min-width: 992px) {
   .bd-grid {
     margin-left: auto;
