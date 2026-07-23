@@ -5,22 +5,18 @@
 :root {
   --header-height: 3rem;
   --font-semi: 600;
-  /*===== Colores =====*/
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
-  /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
-  /*===== Margenes =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
-  /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
 }
@@ -141,9 +137,6 @@ img {
 .nav__link {
   position: relative;
   color: #fff;
-}
-.nav__link:hover {
-  position: relative;
 }
 .nav__link:hover::after {
   position: absolute;
@@ -291,18 +284,10 @@ img {
   border-radius: 0.5rem;
   z-index: var(--z-back);
 }
-.skills__html {
-  width: 95%;
-}
-.skills__css {
-  width: 85%;
-}
-.skills__js {
-  width: 65%;
-}
-.skills__ux {
-  width: 85%;
-}
+.skills__html { width: 95%; }
+.skills__css { width: 85%; }
+.skills__js { width: 65%; }
+.skills__ux { width: 85%; }
 .skills__img {
   border-radius: 0.5rem;
 }
@@ -343,7 +328,7 @@ img {
   margin-left: auto;
 }
 
-/* ===== FOOTER =====*/
+/* ===== FOOTER (Mobile default) =====*/
 .footer {
   background-color: var(--second-color);
   color: #fff;
@@ -367,20 +352,14 @@ img {
   font-size: var(--smaller-font-size);
 }
 
-/* ===== MEDIA QUERIES=====*/
+/* ===== MEDIA QUERIES (TABLET & MOBILE UP TO 576PX) =====*/
 @media screen and (max-width: 320px) {
-  .home {
-    row-gap: 2rem;
-  }
-  .home__img {
-    width: 200px;
-  }
+  .home { row-gap: 2rem; }
+  .home__img { width: 200px; }
 }
 
-@media screen and (min-width: 576px) {
-  .home {
-    padding: 4rem 0 2rem;
-  }
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .home { padding: 4rem 0 2rem; }
   .home__social {
     padding-top: 0;
     padding-bottom: 2.5rem;
@@ -419,46 +398,44 @@ img {
   }
 }
 
+/* ===== DESKTOP HORIZONTAL SNAP LAYOUT (768px and up) =====*/
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
-    overflow: hidden; /* Lock vertical scroll on desktop */
+    overflow: hidden; /* Lock vertical scrolling on desktop */
   }
 
-  /* --- HORIZONTAL NAVIGATION STYLES --- */
   .horizontal-container {
     display: flex;
     flex-direction: row;
-    width: 500vw; /* 5 sections total */
+    width: 100vw;
     height: 100vh;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    padding-top: calc(var(--header-height) + 1.5rem);
-    box-sizing: border-box;
+    padding-top: var(--header-height);
   }
 
   .horizontal-section {
     flex: 0 0 100vw;
     width: 100vw;
-    height: calc(100vh - (var(--header-height) + 1.5rem));
+    height: 100vh;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
+    padding: calc(var(--header-height) + 2rem) 4rem 2rem 4rem;
     overflow-y: auto;
-    padding-left: max(1rem, calc((100vw - 1024px) / 2));
-    padding-right: max(1rem, calc((100vw - 1024px) / 2));
   }
 
-  .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    padding: 1rem 0;
+  /* Footer acts as the final horizontal panel on desktop */
+  .footer.horizontal-section {
+    background-color: var(--second-color);
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
   }
 
   .section {
@@ -489,15 +466,30 @@ img {
   .nav__link {
     color: var(--second-color);
   }
+  .home.bd-grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 2rem;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
   .home {
-    padding: 8rem 0 2rem;
+    padding: 0 2rem;
   }
   .home__img {
+    position: relative;
+    right: initial;
+    bottom: initial;
     width: 400px;
-    bottom: 10%;
+    justify-self: center;
   }
   .about__container {
     padding-top: 2rem;
+    max-width: 1024px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: initial;
   }
   .about__img img {
     width: 300px;
@@ -507,10 +499,18 @@ img {
     column-gap: 2rem;
     align-items: center;
     text-align: initial;
+    max-width: 1024px;
+    margin: 0 auto;
   }
   .work__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .contact__form {
+    width: 400px;
+    margin: 0 auto;
   }
 }
 
@@ -518,9 +518,6 @@ img {
   .bd-grid {
     margin-left: auto;
     margin-right: auto;
-  }
-  .home {
-    padding: 10rem 0 2rem;
   }
   .home__img {
     width: 450px;
