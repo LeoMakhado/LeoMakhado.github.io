@@ -466,15 +466,19 @@ img {
   .nav__link {
     color: var(--second-color);
   }
+  
+  /* Full screen width sizing for Home section matching other panels */
   .home.bd-grid {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    column-gap: 2rem;
-    max-width: 1024px;
+    column-gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
   }
   .home {
-    padding: 0 2rem;
+    padding: 0 4rem;
+    max-width: 100%;
   }
   .home__img {
     position: relative;
