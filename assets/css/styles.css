@@ -352,7 +352,7 @@ img {
   font-size: var(--smaller-font-size);
 }
 
-/* ===== MEDIA QUERIES (TABLET & MOBILE UP TO 576PX) =====*/
+/* ===== MEDIA QUERIES (TABLET & MOBILE UP TO 767PX) =====*/
 @media screen and (max-width: 320px) {
   .home { row-gap: 2rem; }
   .home__img { width: 200px; }
@@ -402,7 +402,7 @@ img {
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
-    overflow: hidden; /* Lock vertical scrolling on desktop */
+    overflow: hidden; 
   }
 
   .horizontal-container {
@@ -410,7 +410,7 @@ img {
     flex-direction: row;
     width: 100vw;
     height: 100vh;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     padding-top: var(--header-height);
@@ -419,35 +419,35 @@ img {
   .horizontal-section {
     flex: 0 0 100vw;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - var(--header-height));
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
-    padding: calc(var(--header-height) + 2rem) 4rem 2rem 4rem;
+    padding: 2rem 4rem;
     overflow-y: auto;
   }
 
-  /* Footer acts as the final horizontal panel on desktop */
   .footer.horizontal-section {
     background-color: var(--second-color);
     color: #fff;
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    height: calc(100vh - var(--header-height));
   }
 
   .section {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   .section-title {
-    margin-bottom: var(--mb-6);
+    margin-bottom: var(--mb-4);
   }
   .section-title::after {
     width: 80px;
-    top: 3rem;
+    top: 2rem;
   }
   .nav {
     height: calc(var(--header-height) + 1.5rem);
@@ -484,7 +484,7 @@ img {
     justify-self: center;
   }
   .about__container {
-    padding-top: 2rem;
+    padding-top: 1rem;
     max-width: 1024px;
     margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
@@ -492,7 +492,7 @@ img {
     text-align: initial;
   }
   .about__img img {
-    width: 300px;
+    width: 250px;
   }
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
