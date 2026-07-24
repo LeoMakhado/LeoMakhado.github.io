@@ -1021,3 +1021,15 @@ footer p {
     text-align: justify;
   }
 }
+/* ===== 1:1 Aspect Ratio Fix for About Picture ===== */
+#about .section__pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 46vw;
+  max-width: 600px; /* Adjust this value as needed for your design size */
+  margin: 0 auto 2rem;
+  padding: 0;
+}
+
