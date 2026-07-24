@@ -1,12 +1,9 @@
 /* ==========================================
-   MERGED CSS (Prioritizing File 1 Core Rules, 
-   Integrated with File 2 Navigation & Variables)
+   MERGED CSS (Prioritizing File 1 & 1:1 Aspect Ratio)
    ========================================== */
 
-/* ===== GOOGLE FONTS ===== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-/* ===== VARIABLES CSS (From File 2) ===== */
 :root {
   --header-height: 3rem;
   --font-semi: 600;
@@ -35,7 +32,6 @@
   }
 }
 
-/* ===== GENERAL (From File 1 - Prioritized) ===== */
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -58,7 +54,7 @@ body {
 }
 
 p {
-  color: rgb(247, 243, 243);
+  color: rgb(53, 53, 53);
 }
 
 h1, h2 {
@@ -77,13 +73,12 @@ img {
   display: block;
 }
 
-/* ===== TRANSITION ===== */
 a,
 .btn {
   transition: all 300ms ease;
 }
 
-/* ===== LAYOUT & NAVIGATION (Prioritizing File 2 Structure + File 1 Style) ===== */
+/* LAYOUT & NAVIGATION */
 .bd-grid {
   max-width: 1024px;
   display: grid;
@@ -107,13 +102,6 @@ nav {
   justify-content: space-around;
   align-items: center;
   font-weight: var(--font-semi);
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  font-size: 1.5rem;
 }
 
 .nav__list {
@@ -170,25 +158,11 @@ a:hover {
   color: var(--second-color);
 }
 
-.logo:hover {
-  cursor: default;
-}
-
 .nav__toggle {
   color: var(--second-color);
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
-}
-
-/* HAMBURGER MENU & MOBILE NAV */
-#hamburger-nav {
-  display: none;
-}
-
-.hamburger-menu {
-  position: relative;
-  display: inline-block;
 }
 
 @media screen and (max-width: 767px) {
@@ -220,7 +194,7 @@ a:hover {
   right: 0;
 }
 
-/* ===== SECTIONS (From File 1) ===== */
+/* SECTIONS */
 section {
   padding-top: 4vh;
   height: 96vh;
@@ -254,7 +228,7 @@ section {
   background-color: var(--first-color);
 }
 
-/* ===== HOME SECTION & BLOB FIXES (From File 1 Priority) ===== */
+/* HOME SECTION & BLOB (Mobile: Above, Desktop: Left) */
 #home {
   padding-top: var(--header-height, 4rem);
   display: flex;
@@ -267,7 +241,7 @@ section {
 
 .home-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Mobile stack: Image on top */
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -282,10 +256,11 @@ section {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 420px;
+  max-width: 320px;
   height: auto;
   margin: 0 auto;
   box-sizing: border-box;
+  order: 1; /* Image first on mobile */
 }
 
 #home .home__blob {
@@ -297,34 +272,18 @@ section {
 }
 
 .home__blob-img {
-  width: 360px;
+  width: 479px;
+  height: 467px;
 }
 
-#profile {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  height: 80vh;
-}
-
-.section__pic-container {
-  display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
-
-.section__text {
+#home .section__text {
+  order: 2; /* Text below image on mobile */
   align-self: center;
   text-align: center;
 }
 
 .section__text p {
   font-weight: 600;
-}
-
-.section__text__p1 {
-  text-align: center;
 }
 
 .section__text__p2 {
@@ -344,7 +303,6 @@ section {
   gap: 1rem;
 }
 
-/* ICONS */
 .icon {
   cursor: pointer;
   height: 2rem;
@@ -393,35 +351,42 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-/* ABOUT SECTION */
+/* ABOUT SECTION & 1:1 ASPECT RATIO FIX */
 #about {
   position: relative;
+}
+
+#about .section-container {
+  gap: 4rem;
+  height: 80%;
+  align-items: center;
+}
+
+#about .section__pic-container {
+  height: auto;
+  width: 100%;
+  max-width: 400px;
+  margin: auto 0;
+}
+
+.about-pic {
+  width: 100%;
+  aspect-ratio: 1 / 1;      /* Forces exact 1:1 square proportion */
+  object-fit: cover;        /* Prevents image distortion */
+  border-radius: 2rem;
 }
 
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  display: flex;
 }
 
 .about-details-container {
   justify-content: center;
   flex-direction: column;
-}
-
-.about-containers,
-.about-details-container {
   display: flex;
-}
-
-.about-pic {
-  border-radius: 2rem;
-}
-
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
 }
 
 .details-container {
@@ -434,110 +399,7 @@ section {
   text-align: center;
 }
 
-/* EXPERIENCE SECTION */
-#experience {
-  position: relative;
-}
-
-.experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
-
-.experience-details-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.article-container {
-  display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
-}
-
-article {
-  display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
-}
-
-article .icon {
-  cursor: default;
-}
-
-/* PROJECTS SECTION */
-#projects {
-  position: relative;
-}
-
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
-}
-
-.project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
-}
-
-.project-title {
-  margin: 1rem;
-  color: black;
-}
-
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
-}
-
-/* CONTACT */
-#contact {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 70vh;
-}
-
-.contact-info-upper-container {
-  display: flex;
-  justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
-  margin: 2rem auto;
-  padding: 0.5rem;
-}
-
-.contact-info-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
-}
-
-.contact-info-container p {
-  font-size: larger;
-}
-
-.contact-icon {
-  cursor: default;
-}
-
-.email-icon {
-  height: 2.5rem;
-}
-
-/* FOOTER SECTION */
+/* FOOTER */
 footer {
   height: 26vh;
   margin: 0 1rem;
@@ -547,12 +409,7 @@ footer p {
   text-align: center;
 }
 
-footer nav {
-  height: fit-content;
-  margin-bottom: 2rem;
-}
-
-/* ===== MEDIA QUERIES ===== */
+/* DESKTOP VIEW QUERY (Side-by-side: Blob on Left, Title on Right) */
 @media screen and (min-width: 768px) {
   .nav {
     height: calc(var(--header-height) + 1.5rem);
@@ -562,7 +419,7 @@ footer nav {
     padding-top: 0;
   }
   .nav__item {
-    margin-left: var(--mb-6, 3rem);
+    margin-left: 3rem;
     margin-bottom: 0;
   }
   .nav__toggle {
@@ -571,13 +428,27 @@ footer nav {
   .nav__link {
     color: var(--second-color);
   }
+  
   .home-container {
-    flex-direction: row;
+    flex-direction: row; /* Side-by-side view */
     justify-content: space-around;
     align-items: center;
     gap: 4rem;
   }
+
   #home .section__pic-container {
-    max-width: 480px;
+    order: 1; /* Blob/Mask/SVG image on the left */
+    max-width: 450px;
+  }
+
+  #home .section__text {
+    order: 2; /* Title Leonel Makhado on the right */
+    text-align: left;
+  }
+
+  #home .section__text__p1,
+  #home .title,
+  #home .section__text__p2 {
+    text-align: left;
   }
 }
