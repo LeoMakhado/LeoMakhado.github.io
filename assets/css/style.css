@@ -483,51 +483,5 @@ footer p {
     max-width: 480px; /* Makes the SVG blob nice and big on desktop */
   }
 
- /* ===== FIXED MOBILE MENU BOX STYLING ===== */
-@media screen and (max-width: 767px) {
-  .nav__menu {
-    position: fixed;
-    top: var(--header-height);
-    right: -100%; /* Hidden off-screen by default */
-    width: 80%;
-    height: calc(100vh - var(--header-height));
-    padding: 2rem;
-    background-color: var(--second-color);
-    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
-    transition: right 0.4s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-  }
-
-  /* Force vertical list alignment inside mobile menu */
-  .nav__menu .nav__list {
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: flex-start;
-  }
-
-  .nav__menu .nav__link {
-    color: #fff;
-    font-size: 1.25rem;
-  }
-
-  /* Show menu class triggered by JavaScript */
-  .nav__menu.show {
-    right: 0; /* Slides the box into view */
-  }
-}
-
-/* Ensure desktop nav hides properly on mobile */
-@media screen and (max-width: 767px) {
-  .nav__toggle {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .nav__toggle {
-    display: none;
-  }
-}
+ 
   
