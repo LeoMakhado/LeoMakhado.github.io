@@ -661,12 +661,7 @@ section {
   height: 80vh;
 }
 
-.section__pic-container {
-  display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
+
 
 .section__text {
   align-self: center;
@@ -800,11 +795,7 @@ section {
   height: 80%;
 }
 
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
+
 
 /* EXPERIENCE SECTION */
 
@@ -958,8 +949,8 @@ footer p {
     margin: 0 5%;
   }
   .section__pic-container {
-    width: 275px;
-    height: 275px;
+    width: 450px;
+    height: 450px;
     margin: 0 auto 2rem;
   }
   .about-containers {
