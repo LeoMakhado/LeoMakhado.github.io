@@ -482,27 +482,11 @@ footer p {
   padding: 0 1rem;
 }
 
-/* Desktop View: Side-by-side layout ensuring absolute containment */
-@media screen and (min-width: 768px) {
-  .home-container {
-    flex-direction: row; /* Image on left, text/title on right */
-    justify-content: space-around;
-    align-items: center;
-    gap: 4rem;
-  }
+
 
   #home .section__pic-container {
     max-width: 480px; /* Makes the SVG blob nice and big on desktop */
   }
 
-  #home .section__text {
-    text-align: initial;
-    max-width: 500px;
-  }
-
-  #home .section__text__p1,
-  #home .title,
-  #home .section__text__p2 {
-    text-align: left;
-  }
-}
+ 
+  

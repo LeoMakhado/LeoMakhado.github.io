@@ -1082,11 +1082,7 @@ footer p {
   display: block;
 }
 
-#home .section__text {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 1rem;
-}
+
 
 /* Desktop View: Side-by-side layout ensuring absolute containment */
 @media screen and (min-width: 768px) {
@@ -1099,16 +1095,5 @@ footer p {
 
   #home .section__pic-container {
     max-width: 480px; /* Makes the SVG blob nice and big on desktop */
-  }
-
-  #home .section__text {
-    text-align: initial;
-    max-width: 500px;
-  }
-
-  #home .section__text__p1,
-  #home .title,
-  #home .section__text__p2 {
-    text-align: left;
   }
 }
