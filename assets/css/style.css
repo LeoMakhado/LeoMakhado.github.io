@@ -432,3 +432,56 @@ footer {
 footer p {
   text-align: center;
 }
+#home {
+    padding-top: var(--header-height, 4rem); /* Adjust '4rem' to match your actual header height */
+}
+/* ===== HOME SECTION BOUNDARY & BLOB FIXES ===== */
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevents anything from overflowing the section bounds */
+  max-width: 100%;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column; /* Mobile: Image on top, text below */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  gap: 2rem;
+}
+
+/* Big SVG Blob Container Scaling */
+#home .section__pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 420px; /* Large and responsive */
+  height: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+#home .home__blob {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+
+
+
+  #home .section__pic-container {
+    max-width: 480px; /* Makes the SVG blob nice and big on desktop */
+  }
+
+ 
+  

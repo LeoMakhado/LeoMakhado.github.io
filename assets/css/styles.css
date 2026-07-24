@@ -1021,19 +1021,50 @@ footer p {
     text-align: justify;
   }
 }
-/* ===== 1:1 Aspect Ratio Fix for About Picture ===== */
-#about .section__pic-container {
+
+.home-container {
+  display: flex;
+  flex-direction: column; /* Mobile: Image on top, text below */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  gap: 2rem;
+}
+
+/* Big SVG Blob Container Scaling */
+#home .section__pic-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 400px;
-  margin: auto 0;
+  max-width: 420px; /* Large and responsive */
+  height: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-#about .about-pic {
+#home .home__blob {
   width: 100%;
-  aspect-ratio: 1 / 1;       /* Forces an exact 1:1 square proportion */
-  object-fit: cover;         /* Prevents any image distortion or squishing */
-  border-radius: 2rem;       /* Keeps your rounded corners styling */
+  height: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+
+
+/* Desktop View: Side-by-side layout ensuring absolute containment */
+@media screen and (min-width: 768px) {
+  .home-container {
+    flex-direction: row; /* Image on left, text/title on right */
+    justify-content: space-around;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  #home .section__pic-container {
+    max-width: 480px; /* Makes the SVG blob nice and big on desktop */
+  }
 }
