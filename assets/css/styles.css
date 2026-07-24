@@ -6,7 +6,7 @@
   --header-height: 3rem;
   --font-semi: 600;
   --hue-color: 224;
-  --first-color: hsl(var(--hue-color), 0%, 100%);
+  --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
@@ -733,12 +733,12 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-  background: rgb(0, 0, 0);
+  background: rgb(53, 53, 53);
   color: white;
 }
 
 .btn-color-1:hover {
-  background: rgb#6a7bab(106 123 171);
+  background: rgb(0, 0, 0);
 }
 
 .btn-color-2 {
