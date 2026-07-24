@@ -1026,16 +1026,14 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
-  height: 46vw;
-  max-width: 600px; /* Adjust this value as needed for your design size */
-  margin: 0 auto 2rem;
-  padding: 0;
+  width: 100%;
+  max-width: 400px;
+  margin: auto 0;
 }
 
 #about .about-pic {
   width: 100%;
-  aspect-ratio: 1 / 1;       /* Forces a 1:1 width-to-height proportion */
-  object-fit: cover;         /* Prevents image distortion inside the ratio */
-  border-radius: 2rem;     /* Keeps your rounded corner style */
+  aspect-ratio: 1 / 1;       /* Forces an exact 1:1 square proportion */
+  object-fit: cover;         /* Prevents any image distortion or squishing */
+  border-radius: 2rem;       /* Keeps your rounded corners styling */
 }
