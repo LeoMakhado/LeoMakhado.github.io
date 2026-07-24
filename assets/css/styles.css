@@ -1037,3 +1037,7 @@ footer p {
   object-fit: cover;         /* Prevents any image distortion or squishing */
   border-radius: 2rem;       /* Keeps your rounded corners styling */
 }
+
+#home {
+    padding-top: var(--header-height, 4rem); /* Adjust '4rem' to match your actual header height */
+}

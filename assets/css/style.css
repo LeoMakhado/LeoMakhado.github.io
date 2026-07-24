@@ -432,3 +432,6 @@ footer {
 footer p {
   text-align: center;
 }
+#home {
+    padding-top: var(--header-height, 4rem); /* Adjust '4rem' to match your actual header height */
+}
