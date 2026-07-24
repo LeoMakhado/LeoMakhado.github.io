@@ -1033,3 +1033,9 @@ footer p {
   padding: 0;
 }
 
+#about .about-pic {
+  width: 100%;
+  aspect-ratio: 1 / 1;       /* Forces a 1:1 width-to-height proportion */
+  object-fit: cover;         /* Prevents image distortion inside the ratio */
+  border-radius: 2rem;     /* Keeps your rounded corner style */
+}
