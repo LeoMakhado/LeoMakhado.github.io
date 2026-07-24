@@ -266,23 +266,23 @@ section {
 /* ABOUT SECTION */
 
 #about {
-  position: relative;
+  position: relative !important;
 }
 
 .about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  gap: 2rem !important;
+  margin-bottom: 2rem !important;
+  margin-top: 2rem !important;
 }
 
 .about-details-container {
-  justify-content: center;
-  flex-direction: column;
+  justify-content: center !important;
+  flex-direction: column !important;
 }
 
 .about-containers,
 .about-details-container {
-  display: flex;
+  display: flex !important;
 }
 
 .about-pic {
