@@ -1041,3 +1041,60 @@ footer p {
 #home {
     padding-top: var(--header-height, 4rem); /* Adjust '4rem' to match your actual header height */
 }
+/* Base Home Setup for Mobile (Image Above) */
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile: Image on top, text below */
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Make the SVG image big and responsive on mobile */
+.home-section .section__pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+}
+
+.home-section .home__blob {
+  width: 100%;
+  height: 100%;
+}
+
+/* Desktop View (Min-width 768px or 1024px) */
+@media screen and (min-width: 768px) {
+  .home-container {
+    flex-direction: row; /* Place side-by-side */
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  /* Make the SVG image larger on desktop and place it on the left */
+  .home-section .section__pic-container {
+    width: 400px;
+    height: 400px;
+    order: 1; /* Puts image on the left */
+  }
+
+  .home-section .section__text {
+    order: 2; /* Puts text/title on the right */
+    text-align: initial;
+  }
+
+  .home-section .section__text__p1,
+  .home-section .title,
+  .home-section .section__text__p2 {
+    text-align: left;
+  }
+}
