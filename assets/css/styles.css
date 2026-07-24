@@ -1027,7 +1027,7 @@ footer p {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 300px; /* Adjust this value as needed for your design size */
+  max-width: 400px; /* Adjust this value as needed for your design size */
   margin: 0 auto;
 }
 
