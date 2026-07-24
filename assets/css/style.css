@@ -487,8 +487,8 @@ footer p {
   #about .about-pic {
   width: 100%;
   aspect-ratio: 1 / 1;       /* Forces an exact 1:1 square proportion */
-  object-fit: cover;         /* Prevents any image distortion or squishing */
-  border-radius: 2rem;       /* Keeps your rounded corners styling */
+  object-fit: cover !important;         /* Prevents any image distortion or squishing */
+  border-radius: 2rem !important;       /* Keeps your rounded corners styling */
 }
 
 #home {
