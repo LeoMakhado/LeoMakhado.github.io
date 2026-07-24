@@ -1021,35 +1021,6 @@ footer p {
     text-align: justify;
   }
 }
-/* ===== 1:1 Aspect Ratio Fix for About Picture ===== */
-#about .section__pic-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 400px;
-  margin: auto 0;
-}
-
-#about .about-pic {
-  width: 100%;
-  aspect-ratio: 1 / 1;       /* Forces an exact 1:1 square proportion */
-  object-fit: cover;         /* Prevents any image distortion or squishing */
-  border-radius: 2rem;       /* Keeps your rounded corners styling */
-}
-
-#home {
-    padding-top: var(--header-height, 4rem); /* Adjust '4rem' to match your actual header height */
-}
-/* ===== HOME SECTION BOUNDARY & BLOB FIXES ===== */
-#home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  overflow: hidden; /* Prevents anything from overflowing the section bounds */
-  max-width: 100%;
-}
 
 .home-container {
   display: flex;
