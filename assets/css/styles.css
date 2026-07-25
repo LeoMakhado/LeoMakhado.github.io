@@ -343,7 +343,7 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
+  background-color: black;
   color: #000000;
   text-align: center;
   font-weight: var(--font-semi);
@@ -1138,4 +1138,29 @@ footer p {
   .text-container {
     text-align: justify;
   }
+}
+/* ===== DESKTOP & MOBILE NAV LINKS FIX ===== */
+.nav-links a,
+.menu-links a,
+.nav__link {
+    color: #ffffff; /* Set your default nav link color */
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.menu-links a:hover,
+.nav__link:hover {
+    color: grey;
+    text-decoration: none;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+/* Specific styling if you want white links inside the mobile hamburger dropdown or dark menus */
+.menu-links {
+    background-color: rgb(255, 255, 255);
+}
+
+.menu-links a {
+    color: black;
 }
