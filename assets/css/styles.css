@@ -1119,8 +1119,8 @@ footer p {
   flex-direction: row; /* Desktop: side-by-side */
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 1200px;
+  width: fit-content;
+  max-width: fit-content;
   margin: 0 auto;
   box-sizing: border-box;
   gap: 4rem;
