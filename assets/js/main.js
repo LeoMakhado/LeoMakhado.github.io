@@ -50,7 +50,13 @@ const sr = ScrollReveal({
     delay: 200,
 //     reset: true
 });
-
+function flashSecurityNotice() {
+  const notice = document.getElementById('security-notice');
+  notice.classList.remove('flash-effect');
+  // Trigger reflow to restart animation if clicked multiple times quickly
+  void notice.offsetWidth; 
+  notice.classList.add('flash-effect');
+}
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
