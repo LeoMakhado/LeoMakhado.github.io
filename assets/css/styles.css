@@ -1071,7 +1071,7 @@ footer p {
     font-size: 1rem;
   }
   footer nav {
-    height: 45vh;
+    height: 40vh;
     margin-top: 5rem;
     margin-bottom: 0.03rem;
   }
@@ -1146,7 +1146,7 @@ footer p {
   text-align: center;
   padding: 1.5rem 1rem;
   margin: 0;
-  border-top: 1px solid rgb(60 60 61);
+  border-top: 1px solid rgb(130, 130, 131);
 }
 
 .footer-bottom p {
