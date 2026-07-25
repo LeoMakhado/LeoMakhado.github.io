@@ -854,7 +854,7 @@ article .icon {
 /* FOOTER SECTION */
 footer {
   height: 26vh;
-  margin: 0.03rem;
+  margin: 0rem;
   color: rgb(255, 254, 254);
   background-color: black;
 }
@@ -1071,7 +1071,8 @@ footer p {
     font-size: 1rem;
   }
   footer nav {
-    height: fit-content;
+    height: 45vh;
+    margin-top: 5rem;
     margin-bottom: 0.03rem;
   }
   .contact-info-upper-container,
