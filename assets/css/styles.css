@@ -854,8 +854,8 @@ article .icon {
 /* FOOTER SECTION */
 footer {
   height: 26vh;
-  margin: 0rem;
-  color: black;
+  margin: 0.3rem;
+  color: rgb(255, 254, 254);
   background-color: black;
 }
 
@@ -1061,7 +1061,7 @@ footer p {
 @media screen and (max-width: 600px) {
   #contact,
   footer {
-    height: 40vh;
+    height: fit-content;
   }
   #profile {
     height: 83vh;
@@ -1072,7 +1072,7 @@ footer p {
   }
   footer nav {
     height: fit-content;
-    margin-bottom: 2rem;
+    margin-bottom: 0.03rem;
   }
   .contact-info-upper-container,
   .btn-container {
@@ -1151,4 +1151,5 @@ footer p {
 .footer-bottom p {
   color: rgb(163, 160, 160); /* Text color adjusted for dark backgrounds */
   font-size: 0.9rem;
+  font-weight: 550;
 }
