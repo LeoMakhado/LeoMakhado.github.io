@@ -1108,7 +1108,7 @@ footer p {
   }
   .nav-links li a {
     font-size: 1rem;
-    color: white;
+   
   }
   .experience-sub-title {
     font-size: 1.25rem;
@@ -1120,6 +1120,7 @@ footer p {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+    color: white !important;
   }
   
   .section__pic-container {
