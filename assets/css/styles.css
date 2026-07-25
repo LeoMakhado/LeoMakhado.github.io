@@ -1734,3 +1734,32 @@ footer p {
   object-fit: cover !important;
   border-radius: 2rem !important;
 }
+/* ===== RESTORED & RESPONSIVE ABOUT-CONTAINERS ===== */
+
+/* Default Desktop View: Side-by-side with original proportions */
+.about-containers {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 2rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  width: 100% !important;
+}
+
+.about-containers .details-container {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+/* Mobile & Tablet View: Stack on top of each other */
+@media screen and (max-width: 1200px) {
+  .about-containers {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .about-containers .details-container {
+    width: 100% !important;
+    max-width: 400px !important;
+  }
+}
