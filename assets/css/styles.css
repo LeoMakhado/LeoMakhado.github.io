@@ -718,9 +718,31 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-/* ABOUT SECTION */
+/* ABOUT SECTION (DESKTOP & GENERAL 1:1 FIX) */
 #about {
   position: relative !important;
+}
+
+#about .section__pic-container {
+  width: 400px !important;
+  height: 400px !important;
+  max-width: 400px !important;
+  max-height: 400px !important;
+  aspect-ratio: 1 / 1 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: auto 0 !important;
+}
+
+#about .about-pic {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 400px !important;
+  max-height: 400px !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: contain !important;
+  border-radius: 2rem !important;
 }
 
 .arrow {
@@ -932,7 +954,7 @@ footer p {
   min-width: 0 !important;
 }
 
-/* ===== MEDIA QUERY FIXES FOR MOBILE (BLOB FIT, ABOUT PIC CENTER, & STACKING) ===== */
+/* ===== MEDIA QUERY FIXES FOR MOBILE & DESKTOP ABOUT PIC ===== */
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -1034,7 +1056,7 @@ footer p {
   #about .about-pic {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
     border-radius: 2rem !important;
     margin: 0 auto !important;
   }
