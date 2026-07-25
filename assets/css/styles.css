@@ -506,6 +506,7 @@ nav {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+  font-weight: 50;
   color: white;
 }
 
@@ -1152,5 +1153,5 @@ footer p {
 .footer-bottom p {
   color: rgb(163, 160, 160); /* Text color adjusted for dark backgrounds */
   font-size: 0.9rem;
-  font-weight: 550;
+  font-weight: 350;
 }
