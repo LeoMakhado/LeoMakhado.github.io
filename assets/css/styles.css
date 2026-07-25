@@ -488,10 +488,8 @@ img {
     width: 450px;
   }
 }
+
 /* GENERAL */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -499,7 +497,6 @@ img {
 
 body {
   font-family: "Poppins", sans-serif;
-
 }
 
 html {
@@ -510,16 +507,13 @@ p {
   color: rgb(247, 243, 243);
 }
 
-
 /* TRANSITION */
-
 a,
 .btn {
   transition: all 300ms ease;
 }
 
 /* DESKTOP NAV */
-
 nav,
 .nav-links {
   display: flex;
@@ -559,7 +553,6 @@ a:hover {
 }
 
 /* HAMBURGER MENU */
-
 #hamburger-nav {
   display: none;
 }
@@ -582,7 +575,7 @@ a:hover {
   width: 100%;
   height: 2px;
   background-color: black;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links {
@@ -593,7 +586,7 @@ a:hover {
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links a {
@@ -603,7 +596,6 @@ a:hover {
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
 }
 
 .menu-links li {
@@ -626,20 +618,7 @@ a:hover {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
 /* SECTIONS */
-
 section {
   padding-top: 4vh;
   height: 96vh;
@@ -653,7 +632,6 @@ section {
 }
 
 /* PROFILE SECTION */
-
 #profile {
   display: flex;
   justify-content: center;
@@ -692,14 +670,12 @@ section {
 }
 
 /* ICONS */
-
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
 /* BUTTONS */
-
 .btn-container {
   display: flex;
   justify-content: center;
@@ -742,12 +718,7 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
-  gap: 1rem;
-}
-
 /* ABOUT SECTION */
-
 #about {
   position: relative !important;
 }
@@ -774,7 +745,6 @@ section {
 }
 
 /* EXPERIENCE SECTION */
-
 #experience {
   position: relative;
 }
@@ -813,7 +783,6 @@ article .icon {
 }
 
 /* PROJECTS SECTION */
-
 #projects {
   position: relative;
 }
@@ -840,7 +809,6 @@ article .icon {
 }
 
 /* CONTACT */
-
 #contact {
   display: flex;
   justify-content: center;
@@ -854,7 +822,7 @@ article .icon {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  background: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -880,7 +848,6 @@ article .icon {
 }
 
 /* FOOTER SECTION */
-
 footer {
   height: 26vh;
   margin: 0 1rem;
@@ -889,41 +856,58 @@ footer {
 footer p {
   text-align: center;
 }
+
 #home {
-    padding-top: var(--header-height, 4rem); /* Adjust '4rem' to match your actual header height */
-}
-/* ===== HOME SECTION BOUNDARY & BLOB FIXES ===== */
-#home {
+  padding-top: var(--header-height, 4rem);
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  overflow: hidden; /* Prevents anything from overflowing the section bounds */
+  overflow: hidden;
   max-width: 100%;
 }
 
-.home-container {
+.home-container, 
+#profile {
   display: flex;
-  flex-direction: column; /* Mobile: Image on top, text below */
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 1200px;
+  width: fit-content;
+  max-width: fit-content;
   margin: 0 auto;
   box-sizing: border-box;
-  gap: 2rem;
+  gap: 4rem;
 }
 
-/* Big SVG Blob Container Scaling */
-#home .section__pic-container {
+/* Ensure picture/blob container is on the left */
+#home .section__pic-container,
+#profile .section__pic-container {
+  order: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 420px; /* Large and responsive */
+  max-width: 420px;
   height: auto;
-  margin: 0 auto;
+  margin: 0;
   box-sizing: border-box;
+}
+
+/* Title container on the right */
+#home .section__text,
+#profile .section__text {
+  order: 2;
+  align-self: center;
+  text-align: left;
+}
+
+#home .title,
+#profile .title,
+.section__text .title {
+  font-size: 3rem;
+  white-space: nowrap;
+  line-height: 1.2;
 }
 
 #home .home__blob {
@@ -933,17 +917,22 @@ footer p {
   display: block;
 }
 
-
-
-
-  #home .section__pic-container {
-    max-width: 480px; /* Makes the SVG blob nice and big on desktop */
-  }
-
-  
-#home {
-    padding-top: var(--header-height, 4rem); /* Adjust '4rem' to match your actual header height */
+/* ===== ABOUT-CONTAINERS RESPONSIVE STYLING ===== */
+.about-containers {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 2rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  width: 100% !important;
 }
+
+.about-containers .details-container {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+/* ===== MEDIA QUERY FIXES FOR MOBILE (BLOB FIT, ABOUT PIC CENTER, & STACKING) ===== */
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
@@ -976,10 +965,89 @@ footer p {
   section {
     margin: 0 5%;
   }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+
+  /* Force Home container to stack properly on mobile and make blob fit on all sides */
+  .home-container,
+  #profile {
+    flex-direction: column !important;
+    text-align: center;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #home {
+    flex-direction: column !important;
+    padding: 2rem 0;
+  }
+
+  #home .section__pic-container,
+  #profile .section__pic-container {
+    order: 1;
+    width: 100% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    margin: 0 auto 1.5rem auto !important;
+  }
+
+  #home .home__blob {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    object-fit: contain;
+  }
+
+  #home .section__text,
+  #profile .section__text {
+    order: 2;
+    text-align: center;
+  }
+
+  #home .title,
+  #profile .title,
+  .section__text .title {
+    white-space: normal;
+    font-size: 2.25rem;
+    text-align: center;
+  }
+
+  /* Force About Picture to be perfectly centered in mobile view */
+  #about .section-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  #about .section__pic-container {
+    width: 280px !important;
+    height: 280px !important;
+    max-width: 280px !important;
+    max-height: 280px !important;
+    aspect-ratio: 1 / 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto 2rem auto !important;
+    float: none !important;
+  }
+
+  #about .about-pic {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 2rem !important;
+    margin: 0 auto !important;
+  }
+
+  .about-containers {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .about-containers .details-container {
+    width: 100% !important;
+    max-width: 350px !important;
+    margin: 0 auto !important;
   }
 }
 
@@ -1021,11 +1089,13 @@ footer p {
     gap: 0.5rem;
     text-align: center;
   }
+  
   .section__pic-container {
-    width: auto;
-    height: 46vw;
+    width: 260px;
+    height: 260px;
     justify-content: center;
   }
+
   .section__text__p2 {
     font-size: 1.25rem;
   }
@@ -1034,160 +1104,5 @@ footer p {
   }
   .text-container {
     text-align: justify;
-  }
-}
-
-/* ===== FORCED 400x400 1:1 ABOUT PIC & CONTAINER + PROPER RESPONSIVE ABOUT-CONTAINERS ===== */
-#about .section__pic-container {
-  width: 400px !important;
-  height: 400px !important;
-  max-width: 400px !important;
-  max-height: 400px !important;
-  aspect-ratio: 1 / 1 !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin: auto 0 !important;
-}
-
-#about .about-pic {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 400px !important;
-  max-height: 400px !important;
-  aspect-ratio: 1 / 1 !important;
-  object-fit: cover !important;
-  border-radius: 2rem !important;
-}
-
-/* Restore original multi-column desktop layout and vertical stacking on mobile for about-containers */
-.about-containers {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 2rem !important;
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
-}
-
-@media screen and (max-width: 1200px) {
-  .about-containers {
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-}
-/* ===== RESTORED & RESPONSIVE ABOUT-CONTAINERS ===== */
-
-/* Default Desktop View: Side-by-side with original proportions */
-.about-containers {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 2rem !important;
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
-  width: 100% !important;
-}
-
-.about-containers .details-container {
-  flex: 1 !important;
-  min-width: 0 !important;
-}
-
-/* Mobile & Tablet View: Stack on top of each other */
-@media screen and (max-width: 1200px) {
-  .about-containers {
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-  
-  .about-containers .details-container {
-    width: 100% !important;
-    max-width: 400px !important;
-  }
-}
-#home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.home-container, 
-#profile {
-  display: flex;
-  flex-direction: row; /* Desktop: side-by-side */
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  max-width: fit-content;
-  margin: 0 auto;
-  box-sizing: border-box;
-  gap: 4rem;
-}
-
-/* Ensure the picture/blob container is on the left */
-#home .section__pic-container,
-#profile .section__pic-container {
-  order: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/* Title container on the right */
-#home .section__text,
-#profile .section__text {
-  order: 2;
-  align-self: center;
-  text-align: left;
-}
-
-/* Prevent title words from wrapping or stacking on top of each other */
-#home .title,
-#profile .title,
-.section__text .title {
-  font-size: 3rem;
-  white-space: nowrap; /* Forces "Leonel Makhado" to remain in a single line */
-  line-height: 1.2;
-}
-
-#home .home__blob {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  display: block;
-}
-
-/* Mobile responsive adjustments: Stack vertically when screen is smaller */
-@media screen and (max-width: 1200px) {
-  .home-container,
-  #profile {
-    flex-direction: column !important;
-    text-align: center;
-  }
-  
-  #home .section__pic-container,
-  #profile .section__pic-container {
-    order: 1;
-    margin: 0 auto 2rem auto;
-  }
-
-  #home .section__text,
-  #profile .section__text {
-    order: 2;
-    text-align: center;
-  }
-
-  #home .title,
-  #profile .title,
-  .section__text .title {
-    white-space: normal; /* Allows wrapping safely only on tiny mobile screens if required */
-    font-size: 2.25rem;
   }
 }
