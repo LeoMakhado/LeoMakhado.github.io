@@ -1141,8 +1141,7 @@ footer p {
 }
 /* ===== DESKTOP & MOBILE NAV LINKS FIX ===== */
 .nav-links a,
-.menu-links a,
-.nav__link {
+.menu-links a {
     color: #ffffff; /* Set your default nav link color */
     text-decoration: none;
 }
