@@ -344,7 +344,7 @@ img {
 /* ===== FOOTER =====*/
 .footer {
   background-color: black;
-  color: #000000;
+  color: white;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
@@ -1147,8 +1147,7 @@ footer p {
 }
 
 .nav-links a:hover,
-.menu-links a:hover,
-.nav__link:hover {
+.menu-links a:hover {
     color: grey;
     text-decoration: none;
     text-underline-offset: 1rem;
