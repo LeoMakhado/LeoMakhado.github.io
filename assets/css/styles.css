@@ -504,7 +504,7 @@ html {
 }
 
 p {
-  color: rgb(247, 243, 243);
+  color: rgb(167, 169, 173);
 }
 
 /* TRANSITION */
@@ -921,7 +921,7 @@ footer p {
 #profile .section__text {
   order: 2;
   align-self: center;
-  text-align: left;
+  text-align: center;
 }
 
 #home .title,
