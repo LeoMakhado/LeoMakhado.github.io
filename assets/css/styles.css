@@ -538,6 +538,10 @@ a {
   text-decoration-color: white;
 }
 
+a.nav-links { color: white; 
+
+}
+
 a:hover {
   color: grey;
   text-decoration: none;
