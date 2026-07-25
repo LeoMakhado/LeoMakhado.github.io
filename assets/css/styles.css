@@ -1098,9 +1098,12 @@ footer p {
   .contact-info-container {
     margin: 0;
   }
-  .contact-info-container p,
+  .contact-info-container p{
+    font-size: 1rem;
+  }
   .nav-links li a {
     font-size: 1rem;
+    color: white;
   }
   .experience-sub-title {
     font-size: 1.25rem;
