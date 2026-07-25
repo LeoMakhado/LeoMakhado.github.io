@@ -1723,18 +1723,7 @@ footer p {
   }
 }
 
-/* ===== FORCED 400x400 1:1 ABOUT PIC & CONTAINER ===== */
-#about .section__pic-container {
-  width: 400px !important;
-  height: 400px !important;
-  max-width: 400px !important;
-  max-height: 400px !important;
-  aspect-ratio: 1 / 1 !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin: auto 0 !important;
-}
+
 
 #about .about-pic {
   width: 100% !important;
