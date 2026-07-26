@@ -1175,3 +1175,8 @@ footer p {
   justify-content: center;
   gap: 2rem;
 }
+
+.security-notice-text{
+  text-align: center;
+  margin-top: 0rem;
+}
