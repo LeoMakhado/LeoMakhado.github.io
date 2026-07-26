@@ -1164,3 +1164,14 @@ footer p {
 .flash-effect {
   animation: flashAnimation 0.5s ease-in-out !important;
 }
+.contact-info-upper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-icons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
