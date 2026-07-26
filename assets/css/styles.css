@@ -1155,3 +1155,12 @@ footer p {
   font-size: 0.9rem;
   font-weight: 350;
 }
+@keyframes flash {
+  0% { opacity: 1; color: red; } /* Adjust to whatever flash style you want */
+  50% { opacity: 0.2; }
+  100% { opacity: 1; color: inherit; }
+}
+
+.flash-effect {
+  animation: flash 0.5s ease;
+}
