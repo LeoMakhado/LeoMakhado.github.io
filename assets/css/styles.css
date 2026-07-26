@@ -1165,7 +1165,7 @@ footer p {
   animation: flashAnimation 0.5s ease-in-out !important;
 }
 .contact-info-upper-container {
-  display: flex;
+  display: ruby;
   flex-direction: column;
   align-items: center;
 }
