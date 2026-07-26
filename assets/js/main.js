@@ -52,10 +52,20 @@ const sr = ScrollReveal({
 });
 function flashSecurityNotice() {
   const notice = document.getElementById('security-notice');
+  
+  // Remove the class first in case it's still present
   notice.classList.remove('flash-effect');
-  // Trigger reflow to restart animation if clicked multiple times quickly
+  
+  // Trigger reflow
   void notice.offsetWidth; 
+  
+  // Add the class back
   notice.classList.add('flash-effect');
+
+  // Optional: Automatically clean up the class after the animation finishes (e.g., 500ms)
+  setTimeout(() => {
+    notice.classList.remove('flash-effect');
+  }, 500);
 }
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
