@@ -217,7 +217,7 @@ img {
   margin: 0 auto;
 }
 .home__blob {
-  fill: white;
+  fill: rgb(15, 15, 15);
 }
 .home__blob-img {
   width: 500px;
