@@ -217,7 +217,7 @@ img {
   margin: 0 auto;
 }
 .home__blob {
-  fill: var(--first-color);
+  fill: white;
 }
 .home__blob-img {
   width: 500px;
