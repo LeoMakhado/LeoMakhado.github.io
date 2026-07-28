@@ -605,7 +605,7 @@ a:hover {
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 0 10rem;
+  margin: 0 2rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -741,11 +741,11 @@ section {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  text-align: center;
+  text-align: webkit-center;
 }
 
 .section-container {
-  gap: 4rem;
+  gap: 1rem;
   height: 80%;
 }
 
@@ -768,7 +768,7 @@ section {
 }
 
 .article-container {
-  display: flex;
+  display: webkit-inline-box;
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
@@ -929,7 +929,7 @@ footer p {
 .about-containers {
   display: flex !important;
   flex-direction: row !important;
-  gap: 2rem !important;
+  gap: 1rem !important;
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
   width: 100% !important;
