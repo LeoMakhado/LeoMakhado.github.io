@@ -32,7 +32,7 @@
 
 /*===== BASE =====*/
 *, ::before, ::after {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -605,7 +605,7 @@ a:hover {
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 0 10rem;
+  margin: 0 2rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -773,7 +773,7 @@ section {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 2.5rem;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 article {
@@ -929,7 +929,7 @@ footer p {
 .about-containers {
   display: flex !important;
   flex-direction: row !important;
-  gap: 4rem !important;
+  gap: 1rem !important;
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
   width: 100% !important;
