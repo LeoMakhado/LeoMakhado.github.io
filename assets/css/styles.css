@@ -777,7 +777,7 @@ section {
 }
 
 article {
-  display: inline-grid;
+  display: inline;
   width: 5rem;
   justify-content: flex-start;
   gap: 0.5rem;
